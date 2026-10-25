@@ -175,65 +175,6 @@ Los títulos de las figuras deben identificar expresamente que se trata de datos
 | `ggplot2` | Construcción y exportación de gráficos. |
 | GitHub | Organización y publicación de los archivos y su historial de cambios. |
 
-## Cómo reproducir el análisis
-
-### 1. Preparar el proyecto
-
-Descargar o clonar el repositorio completo y abrir `visualizacion-levaduras-afidos.Rproj` en RStudio. Mantener la estructura de carpetas y el archivo Excel dentro de `datos/`.
-
-### 2. Instalar los paquetes necesarios
-
-Ejecutar una vez en la consola de R, si los paquetes todavía no están instalados:
-
-```r
-install.packages(c("readxl", "dplyr", "tidyr", "ggplot2"))
-```
-
-### 3. Ejecutar la importación y el análisis
-
-Para revisar únicamente la importación y las comprobaciones iniciales:
-
-```r
-source("scripts/01-importar-datos.R", encoding = "UTF-8")
-```
-
-Para ejecutar el flujo de análisis y visualización:
-
-```r
-source("scripts/02-visualizar-datos.R", encoding = "UTF-8")
-```
-
-El segundo script llama al primero y vuelve a importar el Excel, por lo que no depende de objetos conservados de una sesión anterior. Las tablas y los objetos gráficos quedan disponibles en el entorno de R.
-
-Si alguna comprobación detiene la ejecución, se debe revisar su causa antes de continuar; no corresponde eliminarla solo para permitir que el script avance.
-
-### 4. Guardar una figura
-
-La exportación incluida al final del segundo script está comentada. Después de ejecutar el análisis, la primera figura puede guardarse con:
-
-```r
-dir.create("figuras", showWarnings = FALSE)
-
-ggplot2::ggsave(
-  filename = file.path("figuras", "01-crecimiento-poblacional.png"),
-  plot = g1,
-  width = 10,
-  height = 5,
-  units = "in",
-  dpi = 300
-)
-```
-
-El archivo se guarda en la carpeta local `figuras/`. Para que sea visible en GitHub, también debe incorporarse al repositorio y registrarse el cambio.
-
-### 5. Registrar el entorno de ejecución
-
-Para documentar las versiones de R y de los paquetes utilizados, ejecutar:
-
-```r
-sessionInfo()
-```
-
 ## Estado actual del proyecto y hallazgos preliminares
 
 El repositorio dispone de una estructura de carpetas, un archivo de proyecto de RStudio, la documentación de los datos y dos scripts con procedimientos de importación, comprobación, resumen y visualización.
