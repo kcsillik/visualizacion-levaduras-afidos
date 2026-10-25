@@ -113,8 +113,6 @@ La siguiente tabla resume las variables utilizadas explícitamente en los script
 
 La codificación utilizada en los scripts es `L0`, `L1`, `L2`, `L3`, `L5`, `L6`, `L7`, `L8` y `L9`. El código `L0` corresponde al control. Se conserva esta codificación sin introducir ni renumerar tratamientos.
 
-**[Información por completar: correspondencia entre los códigos y la identidad de las ocho cepas, descripción del control e identificación de las dos cepas representadas en el segundo ensayo.]**
-
 ## Tratamiento preliminar de datos ausentes y control de calidad
 
 La importación reconoce las celdas vacías como valores ausentes (`NA`). Los valores ausentes relacionados con el desarrollo de individuos que murieron antes de completar una etapa no deben reemplazarse automáticamente por cero.
@@ -132,8 +130,6 @@ El script [`02-visualizar-datos.R`](scripts/02-visualizar-datos.R) contiene el c
 Para el segundo ensayo, el código construye una tabla de vida a partir de los registros diarios y calcula supervivencia (`lx`), reproducción media por individuo vivo (`mx`) y maternidad neta por edad (`lxmx`). También calcula `R0`, `rm_dia`, `lambda_diaria` y `T_dias` por cohorte.
 
 Estos procedimientos están implementados en los scripts, pero este README todavía no presenta una tabla de resultados numéricos verificados.
-
-**[Información por completar: incorporar los resúmenes obtenidos tras ejecutar y revisar los scripts, indicando el tamaño de muestra y la medida de dispersión correspondiente.]**
 
 ## Análisis exploratorio y visualizaciones
 
@@ -238,8 +234,6 @@ Para documentar las versiones de R y de los paquetes utilizados, ejecutar:
 sessionInfo()
 ```
 
-**[Información por completar: registrar las versiones utilizadas y documentar una ejecución completa del proyecto desde una sesión limpia de R.]**
-
 ## Estado actual del proyecto y hallazgos preliminares
 
 El repositorio dispone de una estructura de carpetas, un archivo de proyecto de RStudio, la documentación de los datos y dos scripts con procedimientos de importación, comprobación, resumen y visualización.
@@ -247,20 +241,3 @@ El repositorio dispone de una estructura de carpetas, un archivo de proyecto de 
 La siguiente etapa es documentar la ejecución completa, revisar sus salidas y publicar las figuras y tablas correspondientes. La presencia del código no se presenta como garantía de que todas sus comprobaciones hayan sido ejecutadas satisfactoriamente.
 
 Todavía no se incorporan aquí hallazgos numéricos ni se identifican tratamientos con una respuesta superior. Esa interpretación debe basarse en las salidas revisadas y referirse siempre a la simulación.
-
-**[Información por completar: describir los principales patrones observados en las figuras y tablas verificadas, sin atribuirles significancia estadística ni eficacia biológica real.]**
-
-## Limitaciones y próximos pasos
-
-La principal limitación es el carácter simulado de los datos: los patrones reflejan el escenario construido para el aprendizaje, no resultados empíricos. Además, el primer ensayo contiene medidas repetidas y los parámetros del segundo ensayo se estiman por cohorte, aspectos que deben conservarse en cualquier análisis posterior.
-
-Los próximos pasos son completar la documentación de los tratamientos, ejecutar y revisar el flujo de análisis, incorporar medidas de dispersión en las visualizaciones pertinentes y publicar las figuras junto con una interpretación descriptiva. También se deberá revisar la representación de los bloques temporales y documentar cualquier cambio en el tratamiento de los datos ausentes.
-
-La reproducción descrita en este repositorio parte del Excel existente; no equivale a regenerar la simulación original. Para reproducir también su generación sería necesario incorporar el procedimiento, los supuestos y, cuando corresponda, la semilla utilizados.
-
-## Documentación complementaria
-
-- [Origen, conservación e integridad de los datos](datos/README.md).
-- [Script de importación y comprobaciones iniciales](scripts/01-importar-datos.R).
-- [Script de análisis exploratorio y visualización](scripts/02-visualizar-datos.R).
-- [Documentación de la carpeta de figuras](figuras/README.md).
