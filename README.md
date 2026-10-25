@@ -160,7 +160,11 @@ Los diez individuos que integran cada cohorte en el esquema del script no se con
 
 ### Figuras disponibles en el repositorio
 
-La carpeta [`figuras/`](figuras/) contiene su documentación, que indica que todavía no se han guardado gráficos. El script incluye una instrucción de exportación comentada; por lo tanto, disponer del código de una figura no equivale a tener su imagen publicada en GitHub.
+El proyecto ya cuenta con una primera figura guardada en la carpeta `figuras/`, como parte del avance del análisis exploratorio.
+
+La documentación de las visualizaciones se completará con una descripción de las variables representadas, las medidas de resumen utilizadas y una interpretación de los principales patrones observados. Las figuras restantes se incorporarán a medida que se revisen y exporten desde R.
+
+Las visualizaciones corresponden a datos simulados con fines didácticos y no constituyen evidencia de eficacia de los tratamientos.
 
 Los títulos de las figuras deben identificar expresamente que se trata de datos simulados.
 
